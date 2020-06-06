@@ -30,12 +30,51 @@ body #bg {
   }
 }
 
+@media (min-width: 840px) {
+  body header {
+    margin-bottom: 50px;
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.5);
+            box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.5);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% auto;
+        grid-template-columns: 30% auto;
+  }
+}
+
 body header a {
   color: white;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px 15px 15px 25px;
   display: block;
   text-transform: uppercase;
+}
+
+body header nav {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  body header nav {
+    display: inline-block;
+    background-color: #0050ff;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 840px) {
+  body header nav a {
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px;
+    width: 90px;
+  }
+}
+
+body header nav a:hover {
+  background-color: #001033;
 }
 
 @media (min-width: 840px) {
@@ -105,6 +144,7 @@ main section#primary p {
 }
 
 main section#primary a {
+  color: #001033;
   border-radius: 15px;
   text-decoration: none;
   text-transform: uppercase;
@@ -123,10 +163,15 @@ main section#primary a {
   }
 }
 
+main section#primary a:hover {
+  color: white;
+  background-color: #001033;
+}
+
 div section#intro {
   width: 70%;
   height: 400px;
-  margin: 200px auto 20px;
+  margin: 80px auto 20px;
 }
 
 @media (min-width: 840px) {
@@ -134,12 +179,19 @@ div section#intro {
     background-image: url("../image/icebg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 200px auto 20px;
   }
 }
 
 div h3 {
   color: black;
   text-align: center;
+}
+
+@media (min-width: 840px) {
+  div h3 {
+    line-height: 2em;
+  }
 }
 
 @media (min-width: 840px) {
@@ -162,6 +214,10 @@ div.grid section#products {
   }
 }
 
+div.grid section#products .grid-area {
+  color: #001033;
+}
+
 @media (min-width: 840px) {
   div.grid section#products .grid-area {
     width: 100%;
@@ -175,6 +231,7 @@ div section#bulk {
 }
 
 div a {
+  color: #001033;
   border-radius: 15px;
   text-decoration: none;
   text-transform: uppercase;
@@ -191,6 +248,11 @@ div a {
     display: inline-block;
     padding: 15px 60px;
   }
+}
+
+div a:hover {
+  color: white;
+  background-color: #001033;
 }
 
 footer section#footer {
