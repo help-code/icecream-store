@@ -43,7 +43,7 @@ body #bg {
 }
 
 body header a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   padding: 20px 15px 15px 25px;
   display: block;
@@ -88,7 +88,7 @@ body header nav a:hover {
 }
 
 main section#card {
-  background-color: white;
+  background-color: #ffffff;
   padding: 10px;
   margin: 1em auto;
   border-radius: 15px;
@@ -112,7 +112,7 @@ main section#card {
 }
 
 main section#primary {
-  color: white;
+  color: #ffffff;
   padding: 15px;
   text-align: center;
 }
@@ -149,7 +149,7 @@ main section#primary a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #FFF6BB;
+  background-color: #DCD0D9;
   display: block;
   text-align: center;
   margin: 50px auto o auto;
@@ -164,14 +164,14 @@ main section#primary a {
 }
 
 main section#primary a:hover {
-  color: white;
+  color: #ffffff;
   background-color: #001033;
 }
 
 div section#intro {
   width: 70%;
   height: 400px;
-  margin: 80px auto 50px;
+  margin: 80px auto 80px;
 }
 
 @media (min-width: 840px) {
@@ -202,7 +202,7 @@ div h3 {
 
 div.grid section#products {
   text-align: center;
-  background-color: #FFF6BB;
+  background-color: #DCD0D9;
 }
 
 @media (min-width: 840px) {
@@ -236,7 +236,7 @@ div a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #FFF6BB;
+  background-color: #DCD0D9;
   display: block;
   text-align: center;
   margin: 50px auto o auto;
@@ -251,7 +251,7 @@ div a {
 }
 
 div a:hover {
-  color: white;
+  color: #ffffff;
   background-color: #001033;
 }
 
@@ -259,7 +259,7 @@ footer section#footer {
   background-color: #0050ff;
   text-align: center;
   padding: 15px;
-  color: white;
+  color: #ffffff;
 }
 
 @media (min-width: 840px) {
