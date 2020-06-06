@@ -171,7 +171,7 @@ main section#primary a:hover {
 div section#intro {
   width: 70%;
   height: 400px;
-  margin: 80px auto 20px;
+  margin: 80px auto 50px;
 }
 
 @media (min-width: 840px) {
