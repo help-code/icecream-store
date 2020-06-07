@@ -1,5 +1,6 @@
 body, html {
   height: 100%;
+  margin: 0;
 }
 
 img {
@@ -30,55 +31,83 @@ body #bg {
   }
 }
 
-@media (min-width: 840px) {
-  body header {
-    margin-bottom: 50px;
-    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.5);
-            box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.5);
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 30% auto;
-        grid-template-columns: 30% auto;
-  }
+body .nav {
+  background-color: #0050ff;
+  -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.5);
+          box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.5);
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 50px;
 }
 
-body header a {
+body .nav h1 a {
+  float: left;
   color: #ffffff;
   text-decoration: none;
-  padding: 20px 15px 15px 25px;
+  line-height: 70px;
   display: block;
   text-transform: uppercase;
+  margin-left: 25px;
 }
 
-body header nav {
-  display: none;
+body .menu {
+  margin: 0 30px 0 0;
+  float: right;
 }
 
-@media (min-width: 840px) {
-  body header nav {
-    display: inline-block;
-    background-color: #0050ff;
-    text-align: center;
-    padding: 15px;
-  }
-}
-
-@media (min-width: 840px) {
-  body header nav a {
-    text-decoration: none;
-    font-size: 12px;
-    display: inline-block;
-    padding: 10px;
-    width: 90px;
-  }
-}
-
-body header nav a:hover {
+body .menu a:hover {
+  color: #ffffff;
   background-color: #001033;
 }
 
+body .menu a {
+  clear: right;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 5px;
+  line-height: 70px;
+  display: inline-block;
+  width: 100px;
+}
+
+body label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+
+body #toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 781px) {
+  body label {
+    display: block;
+    cursor: pointer;
+  }
+  body .menu {
+    background-color: #0050ff;
+    text-align: center;
+    width: 100%;
+    display: none;
+    margin: 0 auto;
+  }
+  body .menu a {
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+    margin: 0;
+  }
+  body #toggle:checked + .menu {
+    display: block;
+  }
+}
+
 @media (min-width: 840px) {
-  main {
+  body main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% auto;
@@ -87,7 +116,7 @@ body header nav a:hover {
   }
 }
 
-main section#card {
+body main section#card {
   background-color: #ffffff;
   padding: 10px;
   margin: 1em auto;
@@ -98,7 +127,7 @@ main section#card {
 }
 
 @media (min-width: 840px) {
-  main section#card {
+  body main section#card {
     grid-area: card;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -111,39 +140,39 @@ main section#card {
   }
 }
 
-main section#primary {
+body main section#primary {
   color: #ffffff;
   padding: 15px;
   text-align: center;
 }
 
 @media (min-width: 840px) {
-  main section#primary {
+  body main section#primary {
     grid-area: primary;
     text-align: left;
     margin: 4em 0 0 4em;
   }
 }
 
-main section#primary h1 {
+body main section#primary h1 {
   font-size: 2.5em;
   margin-top: 10px;
   text-transform: uppercase;
 }
 
 @media (min-width: 840px) {
-  main section#primary h1 {
+  body main section#primary h1 {
     width: 40%;
     font-size: 3em;
     line-height: .9em;
   }
 }
 
-main section#primary p {
+body main section#primary p {
   font-size: 1.4em;
 }
 
-main section#primary a {
+body main section#primary a {
   color: #001033;
   border-radius: 15px;
   text-decoration: none;
@@ -157,25 +186,25 @@ main section#primary a {
 }
 
 @media (min-width: 840px) {
-  main section#primary a {
+  body main section#primary a {
     display: inline-block;
     padding: 15px 60px;
   }
 }
 
-main section#primary a:hover {
+body main section#primary a:hover {
   color: #ffffff;
   background-color: #001033;
 }
 
-div section#intro {
+body div section#intro {
   width: 70%;
   height: 400px;
   margin: 80px auto 80px;
 }
 
 @media (min-width: 840px) {
-  div section#intro {
+  body div section#intro {
     background-image: url("../image/icebg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -183,30 +212,30 @@ div section#intro {
   }
 }
 
-div h3 {
+body div h3 {
   color: black;
   text-align: center;
 }
 
 @media (min-width: 840px) {
-  div h3 {
+  body div h3 {
     line-height: 2em;
   }
 }
 
 @media (min-width: 840px) {
-  div ul {
+  body div ul {
     line-height: 2em;
   }
 }
 
-div.grid section#products {
+body div.grid section#products {
   text-align: center;
   background-color: #DCD0D9;
 }
 
 @media (min-width: 840px) {
-  div.grid section#products {
+  body div.grid section#products {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto auto auto;
@@ -214,23 +243,23 @@ div.grid section#products {
   }
 }
 
-div.grid section#products .grid-area {
+body div.grid section#products .grid-area {
   color: #001033;
 }
 
 @media (min-width: 840px) {
-  div.grid section#products .grid-area {
+  body div.grid section#products .grid-area {
     width: 100%;
     height: 80%;
   }
 }
 
-div section#bulk {
+body div section#bulk {
   text-align: center;
   padding: 20px;
 }
 
-div a {
+body div section#bulk a {
   color: #001033;
   border-radius: 15px;
   text-decoration: none;
@@ -244,18 +273,18 @@ div a {
 }
 
 @media (min-width: 840px) {
-  div a {
+  body div section#bulk a {
     display: inline-block;
     padding: 15px 60px;
   }
 }
 
-div a:hover {
+body div section#bulk a:hover {
   color: #ffffff;
   background-color: #001033;
 }
 
-footer section#footer {
+body footer section#footer {
   background-color: #0050ff;
   text-align: center;
   padding: 15px;
@@ -263,13 +292,13 @@ footer section#footer {
 }
 
 @media (min-width: 840px) {
-  footer section#footer hr {
+  body footer section#footer hr {
     display: none;
   }
 }
 
 @media (min-width: 840px) {
-  footer section#footer p:first-child {
+  body footer section#footer p:first-child {
     float: right;
   }
 }

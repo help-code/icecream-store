@@ -1,4 +1,4 @@
-
+    // Assigning Colors //
 $colors : (
     normal: #ffffff,
     primary: #0050ff,
@@ -6,10 +6,11 @@ $colors : (
     primary-light: lighten(#0050ff, 40%),
     primary-dark: darken(#0050ff, 40%)
 );
-
+ // Declaring padding and border variables //
 $padding : 15px;
 $borders: 15px;
 
+// Function for colors //
 @function color($color-name){
     @return map-get($colors, $color-name )
 }
@@ -24,6 +25,7 @@ $desktop: 840px;
 
 body, html {
     height: 100%;
+    margin: 0;
 }
 
 img {
@@ -49,49 +51,82 @@ body{
 
         }
     }
-    header {
-        @include desktop {
-            margin-bottom: 50px;
-            box-shadow: 0 0 0 10px rgba(0,0,255,.5);
-            display : grid;
-            grid-template-columns: 30% auto;
+.nav {
+    background-color: color(primary);
+    box-shadow: 0 0 0 10px rgba(0,0,255,.5);
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 50px;
+}
+.nav h1 a{
+    float: left;
+    color: color(normal);
+    text-decoration: none;
+    line-height: 70px;
+    display: block;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+.menu {
+    margin: 0 30px 0 0;
+    float: right;
 
-        }
-    }
-
-    header a {
-        color: color(normal);
-        text-decoration: none;
-        padding: 20px $padding $padding 25px;
-        display: block;
-        text-transform: uppercase;
-
-    }
-    header nav {
-            display: none;
-        @include desktop {
-            display: inline-block;
-            background-color: color(primary);
-            text-align: center;
-            padding: $padding;
-        }
-        a{
-           @include desktop{
-                text-decoration: none;
-                font-size: 12px;
-                display:inline-block;
-                padding: 10px;
-                width: 90px;
-           }
-           
-        }
-        a:hover{
-            background-color: color(primary-dark);
-        }
-           
+    a:hover{
+        color : color(normal);
+        background-color: color(primary-dark);
     }
 }
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: color(normal);
+    margin: 0 5px;
+    line-height: 70px;
+    display: inline-block;
+    width: 100px;
+}
 
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+#toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 781px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        background-color: color(primary);
+        text-align: center;
+        width: 100%;
+        display: none;
+        margin: 0 auto;
+
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+
+     
+    }
+    #toggle:checked + .menu {
+        display: block;
+
+    }   
+}
+
+ 
 main {
 
     @include desktop {
@@ -227,29 +262,31 @@ div {
     section#bulk {
         text-align: center;
         padding: 20px;
-    }
 
-    a{
-        color: color(primary-dark);
-        border-radius: $borders;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        background-color: color(accent);
-        display: block;
-        text-align: center;
-        margin: 50px auto o auto;
-        padding: $padding;
+        a{
+            color: color(primary-dark);
+            border-radius: $borders;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: color(accent);
+            display: block;
+            text-align: center;
+            margin: 50px auto o auto;
+            padding: $padding;
+    
+            @include desktop {
+                display: inline-block;
+                padding: $padding $padding * 4;
+            }
 
-        @include desktop {
-            display: inline-block;
-            padding: $padding $padding * 4;
+        }
+        a:hover{
+            color : color(normal);
+            background-color: color(primary-dark);
         }
     }
-    a:hover{
-        color : color(normal);
-        background-color: color(primary-dark);
-    }
+
 }
 
 footer {
@@ -271,4 +308,5 @@ footer {
             }
         }
     }
+  }
 }
